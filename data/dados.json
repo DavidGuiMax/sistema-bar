@@ -1,0 +1,48 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Cervejas"
+    },
+    {
+      "id": 2,
+      "nome": "Refrigerantes"
+    },
+    {
+      "id": 3,
+      "nome": "Destilados"
+    }
+  ],
+
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Heineken",
+      "preco": 12.00,
+      "categoria": 1,
+      "imagem": "assets/img/produtos/heineken.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "Skol",
+      "preco": 9.00,
+      "categoria": 1,
+      "imagem": "assets/img/produtos/skol.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Coca-Cola",
+      "preco": 8.00,
+      "categoria": 2,
+      "imagem": "assets/img/produtos/coca.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "Whisky Red Label",
+      "preco": 18.00,
+      "categoria": 3,
+      "imagem": "assets/img/produtos/redlabel.jpg"
+    }
+  ],
+  "fiados": []
+}

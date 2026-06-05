@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administração</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+    <div class="admin-container">
+        <div class="admin-brand">
+
+            <img
+                src="assets/img/logo/logo.png"
+                alt="Logo">
+
+            <h2>Bar do Gel</h2>
+
+        </div>
+        
+        <aside class="sidebar">
+
+            <h2>Painel</h2>
+
+            <ul>
+
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="fiados.html">Fiados</a></li>
+
+            </ul>
+
+        </aside>
+
+        <main>
+
+            <section class="dashboard">
+
+                <div class="box">
+                    <h3>Produtos</h3>
+                    <span id="totalProdutos">0</span>
+                </div>
+
+                <div class="box">
+                    <h3>Categorias</h3>
+                    <span id="totalCategorias">0</span>
+                </div>
+
+                <div class="box">
+                    <h3>Valor Fiado</h3>
+                    <span id="valorFiadoTotal">
+                        R$ 0,00
+                    </span>
+                </div>
+
+            </section>
+
+            <section class="formulario">
+
+                <h2>Novo Produto</h2>
+
+                <input id="nome" placeholder="Nome">
+
+                <input id="preco" type="number" placeholder="Preço">
+
+                <label>Imagem do Produto</label>
+
+                <input
+                    type="file"
+                    id="imagem"
+                    accept="image/*">
+
+                <img
+                    id="previewImagem"
+                    style="
+                    width:200px;
+                    display:none;
+                    border-radius:10px;
+                    margin-top:10px;
+                ">
+
+                <select id="categoria"></select>
+
+                <button id="salvarProduto">
+                    Salvar Produto
+                </button>
+
+            </section>
+
+            <section class="categorias-admin">
+
+                <h2>Categorias</h2>
+
+                <input
+                    id="novaCategoria"
+                    placeholder="Nova categoria">
+
+                <button id="criarCategoria">
+                    Criar
+                </button>
+
+            </section>
+
+            <section>
+
+                <h2>Backup</h2>
+
+                <button id="exportarBackup">
+                    Exportar Backup
+                </button>
+
+                <br><br>
+
+                <input
+                    type="file"
+                    id="importarBackup"
+                >
+
+            </section>
+
+            <section>
+
+                <h2>Produtos Cadastrados</h2>
+
+                <div id="listaProdutos"></div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <div id="modalEditar" class="modal">
+
+        <div class="modal-content">
+
+            <h2>Editar Produto</h2>
+
+            <input
+                id="editNome"
+                placeholder="Nome">
+
+            <input
+                id="editPreco"
+                type="number"
+                placeholder="Preço">
+
+            <input
+                type="file"
+                id="editImagem"
+                accept="image/*
+            ">
+
+            <img
+                id="editPreview"
+                style="
+                width:200px;
+                display:none;
+                border-radius:10px;
+            ">
+
+            <button id="salvarEdicao">
+                Salvar Alterações
+            </button>
+
+            <button id="fecharModal">
+                Cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/supabase.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/admin.js"></script>
+
+</body>
+</html>

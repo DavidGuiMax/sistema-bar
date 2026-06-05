@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Controle de Fiados</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fiados.css">
+
+</head>
+
+<body>
+
+    <main class="container-fiados">
+
+        <div class="fiados-header">
+
+            <h1>Controle de Fiados</h1>
+
+            <a href="admin.html" class="btn-voltar">
+                ← Voltar ao Painel
+            </a>
+
+        </div>
+
+        <section class="novo-cliente">
+
+            <input
+                type="text"
+                id="nomeCliente"
+                placeholder="Nome do cliente">
+
+            <button id="btnAdicionarCliente">
+                Adicionar Cliente
+            </button>
+
+        </section>
+
+        <section id="dashboardFiados">
+
+            <div class="card-dashboard">
+                <h3>Clientes</h3>
+                <span id="totalClientes">0</span>
+            </div>
+
+            <div class="card-dashboard">
+                <h3>Total Devido</h3>
+                <span id="totalDividas">R$ 0,00</span>
+            </div>
+
+        </section>
+
+        <input
+            class="mgbt"
+            id="pesquisaCliente"
+            placeholder="Pesquisar cliente"
+        >
+
+        <section id="listaClientes"></section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/supabase.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/fiados.js"></script>
+
+</body>
+</html>
