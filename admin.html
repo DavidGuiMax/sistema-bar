@@ -16,6 +16,9 @@
 <body>
 
     <div class="admin-container">
+
+    <aside class="sidebar">
+
         <div class="admin-brand">
 
             <img
@@ -25,19 +28,26 @@
             <h2>Bar do Gel</h2>
 
         </div>
-        
-        <aside class="sidebar">
 
-            <h2>Painel</h2>
+        <h2>Painel</h2>
 
-            <ul>
+        <ul>
 
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="fiados.html">Fiados</a></li>
+            <li>
+                <a href="#produtos">
+                    Produtos
+                </a>
+            </li>
 
-            </ul>
+            <li>
+                <a href="fiados.html">
+                    Fiados
+                </a>
+            </li>
 
-        </aside>
+        </ul>
+
+    </aside>
 
         <main>
 
@@ -108,15 +118,13 @@
 
             </section>
 
-            <section>
+                <section class="categorias-admin">
 
                 <h2>Backup</h2>
 
                 <button id="exportarBackup">
                     Exportar Backup
                 </button>
-
-                <br><br>
 
                 <input
                     type="file"
@@ -125,9 +133,11 @@
 
             </section>
 
-            <section>
+            <section id="produtos">
 
-                <h2>Produtos Cadastrados</h2>
+                <h2>
+                    Produtos Cadastrados
+                </h2>
 
                 <div id="listaProdutos"></div>
 

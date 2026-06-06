@@ -202,7 +202,7 @@
 
     border-radius:18px;
 
-    padding:25px;
+    padding:18px;
 
     box-shadow:var(--shadow);
 
@@ -243,7 +243,7 @@
 
     border-radius:18px;
 
-    padding:25px;
+    padding:18px;
 
     margin-bottom:20px;
 
@@ -285,7 +285,7 @@
 
 .amarelo{
 
-    border-left:6px solid #FACC15;
+    border-left:6px solid #fad334;
 
 }
 
@@ -403,6 +403,8 @@
 
     justify-content:space-between;
 
+    flex-wrap:wrap;
+
     align-items:center;
 
     gap:15px;
@@ -447,44 +449,43 @@
 
 @media(max-width:768px){
 
-    .fiados-header{
+    .container-fiados{
+
+        padding:15px;
+    }
+
+    h1{
+
+        font-size:1.6rem;
+    }
+
+    #dashboardFiados{
+
+        grid-template-columns:1fr;
+    }
+
+    .cliente{
+
+        margin-bottom:15px;
+    }
+
+    .acoes button{
+
+        width:100%;
+    }
+
+    .acoes input{
+
+        min-width:100%;
+    }
+
+    .item-historico{
 
         flex-direction:column;
 
         align-items:flex-start;
 
-    }
-
-    .btn-voltar{
-
-        width:100%;
-
-        text-align:center;
-
-    }
-
-    .novo-cliente{
-
-        flex-direction:column;
-
-    }
-
-    .novo-cliente button{
-
-        height:52px;
-
-    }
-
-    .acoes{
-
-        flex-direction:column;
-
-    }
-
-    .acoes input{
-
-        width:100%;
-
+        gap:5px;
     }
 
 }

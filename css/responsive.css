@@ -1,15 +1,216 @@
-@media (min-width:768px){
+/* =========================
+   TABLETS
+========================= */
 
-    .card{
-        min-width:250px;
+@media (max-width:1024px){
+
+    .admin-container{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
+        border-right:none;
+        border-bottom:1px solid var(--border);
+    }
+
+    main{
+        width:100%;
+        min-width:0;
+        padding:20px;
+        overflow-x:hidden;
     }
 
 }
 
-@media (min-width:1200px){
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:768px){
+
+    /* INDEX */
+
+    header{
+        padding:12px;
+        gap:10px;
+    }
+
+    .logo img{
+        width:50px;
+        height:50px;
+    }
+
+    header h1{
+        font-size:1.4rem;
+    }
+
+    .hero p{
+        font-size:.9rem;
+    }
+
+    #pesquisa{
+        height:45px;
+    }
+
+    main{
+        padding:15px 10px;
+    }
+
+    .categoria{
+        margin-bottom:30px;
+    }
+
+    .categoria h2{
+        font-size:1.2rem;
+    }
+
+    .carrossel{
+        gap:10px;
+    }
 
     .card{
-        min-width:280px;
+        width:140px;
+        min-width:140px;
+        max-width:140px;
+    }
+
+    .card img{
+        height:100px;
+    }
+
+    .info{
+        padding:10px;
+    }
+
+    .nome{
+        font-size:.9rem;
+    }
+
+    .preco{
+        font-size:1rem;
+    }
+
+    /* ADMIN */
+
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+
+    .sidebar{
+        padding:12px;
+    }
+
+    .sidebar ul{
+        display:flex;
+        flex-wrap:wrap;
+        gap:8px;
+    }
+
+    .sidebar li{
+        margin:0;
+    }
+
+    .formulario,
+    .categorias-admin{
+        padding:15px;
+    }
+
+    .produtos-grid{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+
+    .produto-card img{
+        height:140px;
+    }
+
+    .produto-acoes{
+        flex-direction:column;
+    }
+
+    .produto-acoes button{
+        width:100%;
+    }
+
+    /* FIADOS */
+
+    .container-fiados{
+        padding:12px;
+    }
+
+    .novo-cliente{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .novo-cliente input,
+    .novo-cliente button{
+        width:100%;
+    }
+
+    #dashboardFiados{
+        grid-template-columns:1fr;
+    }
+
+    .card-dashboard{
+        padding:15px;
+    }
+
+    .cliente{
+        padding:15px;
+    }
+
+    .acoes{
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .acoes input,
+    .acoes button{
+        width:100%;
+    }
+
+    .historico{
+        overflow-x:auto;
+    }
+
+}
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media (max-width:480px){
+
+    header h1{
+        font-size:1.2rem;
+    }
+
+    .categoria h2{
+        font-size:1rem;
+    }
+
+    .card{
+        width:125px;
+        min-width:125px;
+        max-width:125px;
+    }
+
+    .card img{
+        height:90px;
+    }
+
+    .produto-card img{
+        height:120px;
+    }
+
+    .box,
+    .card-dashboard,
+    .cliente{
+        border-radius:12px;
     }
 
 }
