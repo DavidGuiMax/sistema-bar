@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Bar do Gel</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+
+    <style>
+
+        body{
+
+            min-height:100vh;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            padding:20px;
+
+        }
+
+        .login-container{
+
+            width:100%;
+
+            max-width:420px;
+
+            background:var(--surface);
+
+            border:1px solid var(--border);
+
+            border-radius:20px;
+
+            padding:30px;
+
+            box-shadow:var(--shadow);
+
+        }
+
+        .login-logo{
+
+            text-align:center;
+
+            margin-bottom:25px;
+
+        }
+
+        .login-logo img{
+
+            width:90px;
+
+            height:90px;
+
+            object-fit:contain;
+
+            margin-bottom:10px;
+
+        }
+
+        .login-logo h1{
+
+            color:#FFD4C4;
+
+            font-size:1.8rem;
+
+        }
+
+        .login-form{
+
+            display:flex;
+
+            flex-direction:column;
+
+            gap:15px;
+
+        }
+
+        .login-form input{
+
+            height:50px;
+
+            border:none;
+
+            border-radius:12px;
+
+            padding:0 15px;
+
+            background:var(--surface-2);
+
+            color:var(--text);
+
+            border:1px solid var(--border);
+
+        }
+
+        .login-form input:focus{
+
+            outline:none;
+
+            border-color:var(--dark-wine);
+
+            box-shadow:
+            0 0 0 4px rgba(128,14,19,.25);
+
+        }
+
+        .login-form button{
+
+            height:50px;
+
+            border:none;
+
+            border-radius:12px;
+
+            background:var(--dark-wine);
+
+            color:white;
+
+            font-weight:600;
+
+            cursor:pointer;
+
+        }
+
+        .login-form button:hover{
+
+            background:var(--black-cherry);
+
+        }
+
+        #erroLogin{
+
+            color:#ef4444;
+
+            text-align:center;
+
+            display:none;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-logo">
+
+            <h1>Bar do Gel</h1>
+
+        </div>
+
+        <form
+            class="login-form"
+            id="formLogin">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email">
+
+            <input
+                type="password"
+                id="senha"
+                placeholder="Senha">
+
+            <button type="submit">
+
+                Entrar
+
+            </button>
+
+            <p id="erroLogin">
+
+                Email ou senha inválidos
+
+            </p>
+
+        </form>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/supabase.js"></script>
+
+    <script>
+
+        document
+        .getElementById("formLogin")
+        .addEventListener(
+            "submit",
+            async function(e){
+
+                e.preventDefault();
+
+                const email =
+                document.getElementById(
+                    "email"
+                ).value;
+
+                const senha =
+                document.getElementById(
+                    "senha"
+                ).value;
+
+                const { error } =
+                await supabaseClient.auth
+                .signInWithPassword({
+
+                    email,
+                    password: senha
+
+                });
+
+                if(error){
+
+                    document
+                    .getElementById(
+                        "erroLogin"
+                    )
+                    .style.display =
+                    "block";
+
+                    return;
+
+                }
+
+                window.location.href =
+                "admin.html";
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
